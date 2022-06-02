@@ -6,6 +6,6 @@
 
 ### CO. School of Mines
 
-![Linus, My Beautiful Ouch Mouse](OuchMouse.jpg =200x400)
+![Linus, My Beautiful Ouch Mouse](<img src="OuchMouse.jpg" width="200" height="400" />)
 
 [GitHub Page](https://github.com/ERoels23/ERoels23.github.io/)
