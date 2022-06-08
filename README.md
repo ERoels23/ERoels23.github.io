@@ -10,7 +10,9 @@
 I graduated with my Bachelor's in Astronomy-Physics from Colgate University in Spring 2021.
 While there, I took several Computer Science courses and quickly fell in love with the subject.
 I also honed my teaching skills as a Staff Member and Staff Trainer for the Outdoor Education program.
-I'm now pursuing my Master's Degree here at the Colorado School of Mines while teaching Introductory Programming courses.
+I'm now pursuing my Master's Degree (graduating Spring '23) here at the Colorado School of Mines while teaching Introductory Programming courses.
+
+email: eroels@mines.edu
 
 <img src="gfierro.png" alt="gfierro" width="200"/>
 
