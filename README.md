@@ -4,7 +4,7 @@
 
 ## ABOUT US
 
-<img src="DSCF1818 (1).jpg" alt="eroels" width="200"/>
+<img src="eroels.JPG" alt="eroels" width="200"/>
 
 ### **Eric Roels**
 I graduated with my Bachelor's in Astronomy-Physics from Colgate University in Spring 2021.
