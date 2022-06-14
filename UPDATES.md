@@ -4,9 +4,6 @@ title: "Updates"
 permalink: /updates/
 ---
 
-## DREAM Program
-# NOTIONAL MACHINES
-
 ## Week 1
 text text text, lots of good solid text goes here
 
