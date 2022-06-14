@@ -2,7 +2,10 @@ layout: page
 title: "About Us"
 permalink: /about-us/
 
-Put in all of the website header stuff here!
+## DREAM Program
+# NOTIONAL MACHINES
+
+[Home](https://eroels23.github.io/home/) // [About Me](https://eroels23.github.io/about-us/) // [Updates](https://eroels23.github.io/updates/)
 
 ### Eric Roels (eroels@mines.edu)
 Hey! My name is Eric, I'm a graduate student here at the Colorado School of Mines studying Computer Science.
