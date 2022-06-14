@@ -1,6 +1,8 @@
+---
 layout: page
 title: "HOME"
 permalink: /home/
+---
 
 ## DREAM Program
 # NOTIONAL MACHINES
