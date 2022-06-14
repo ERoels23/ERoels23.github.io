@@ -4,9 +4,6 @@ title: "Home"
 permalink: /home/
 ---
 
-## DREAM Program
-# NOTIONAL MACHINES
-
 Welcome to my website! As a part of the [DREAM Research Program](https://tech.mines.edu/dream/), I'm spending this summer investigating Notional Machines.
 
 ### What is a Notional Machine?
