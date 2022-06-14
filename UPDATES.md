@@ -1,6 +1,8 @@
+---
 layout: page
 title: "Updates"
 permalink: /updates/
+---
 
 ## DREAM Program
 # NOTIONAL MACHINES
