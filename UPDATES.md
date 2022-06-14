@@ -6,6 +6,7 @@ permalink: /updates/
 
 ## DREAM Program
 # NOTIONAL MACHINES
+[Home](https://eroels23.github.io/home/) // [About Me](https://eroels23.github.io/about-us/) // [Updates](https://eroels23.github.io/updates/)
 
 ## Week 1
 text text text, lots of good solid text goes here
