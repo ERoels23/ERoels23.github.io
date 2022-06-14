@@ -1,6 +1,8 @@
+---
 layout: page
 title: "About Us"
 permalink: /about-us/
+---
 
 ## DREAM Program
 # NOTIONAL MACHINES
