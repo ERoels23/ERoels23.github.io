@@ -4,9 +4,6 @@ title: "About Us"
 permalink: /about-us/
 ---
 
-## DREAM Program
-# NOTIONAL MACHINES
-
 <img src="eroels.JPG" alt="Eric Roels" width="200">
 
 ### Eric Roels (eroels@mines.edu)
