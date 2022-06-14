@@ -12,7 +12,7 @@ permalink: /about-us/
 Hey! My name is Eric, I'm a graduate student here at the Colorado School of Mines studying Computer Science.
 My higher-education journey began at Colgate University where I received by Bachelor's in Astronomy-Physics in early 2021.
 While studying physics, I also took several CS courses and quickly found that I enjoyed it much more, so I made the switch after graduating. 
-I'm now working on my Master's Degree (est. graduation in Spring 2023) as a part of the CS@Mines [Bridge Program](https://cs.mines.edu/csbridge/#:~:text=C%2DMAPP%20is%20a%20program,apply%20for%20C%2DMAPP%20Scholarships.) for non-majors.
+I'm now working on my Master's Degree (est. graduation in Spring 2023) as a part of the CS@Mines [Bridge Program](https://cs.mines.edu/csbridge/) for non-majors.
 
 
 <img src="gfierro.png" alt="gfierro" width="200" class="hoverZoomLink">
