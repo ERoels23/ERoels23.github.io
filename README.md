@@ -5,6 +5,7 @@ permalink: /home/
 # Notional Machines
 ### **DREAM Research Program**
 
+[About Me] (https://eroels23.github.io/about-us/)
 
 
 
