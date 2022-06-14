@@ -1,14 +1,11 @@
 ---
 layout: page
-title: "HOME"
+title: "./Home"
 permalink: /home/
 ---
 
 ## DREAM Program
 # NOTIONAL MACHINES
-
-[Home](https://eroels23.github.io/home/) // [About Me](https://eroels23.github.io/about-us/) // [Updates](https://eroels23.github.io/updates/)
-
 
 Welcome to my website! As a part of the [DREAM Research Program](https://tech.mines.edu/dream/), I'm spending this summer investigating Notional Machines.
 
