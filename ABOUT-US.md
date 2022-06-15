@@ -4,7 +4,7 @@ title: "About Us"
 permalink: /about-us/
 ---
 
-<img src="eroels.JPG" alt="Eric Roels" width="200">
+<img src="/eroels.JPG" alt="Eric Roels" width="200">
 
 ### Eric Roels (eroels@mines.edu)
 
@@ -14,7 +14,7 @@ While studying physics, I also took several CS courses and quickly found that I 
 I'm now working on my Master's Degree (est. graduation in Spring 2023) as a part of the CS@Mines [Bridge Program](https://cs.mines.edu/csbridge/) for non-majors.
 
 
-<img src="gfierro.png" alt="Gabriel Fierro" width="200">
+<img src="/gfierro.png" alt="Gabriel Fierro" width="200">
 
 ### Professor Gabe Fierro
 
