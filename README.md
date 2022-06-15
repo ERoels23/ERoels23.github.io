@@ -2,6 +2,7 @@
 layout: page
 title: "Home"
 permalink: /
+order: 1
 ---
 
 Welcome to my website! As a part of the [DREAM Research Program](https://tech.mines.edu/dream/), I'm spending this summer investigating Notional Machines.
