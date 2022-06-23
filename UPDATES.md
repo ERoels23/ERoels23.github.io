@@ -33,7 +33,7 @@ Then forms a select group of principles which one should follow closely when des
 
 I came across several great examples of Notional Machines:
 
-<img src="/pytutor.png" alt="PythonTutor" height="300"> <img src="/uuhistle.png" alt="UUhistle" height="300"> <img src="/novis.png" alt="Novis" height="300">
+<img src="/pytutor.png" alt="PythonTutor" height="200"> <img src="/uuhistle.png" alt="UUhistle" height="200"> <img src="/novis.png" alt="Novis" height="200">
 
 1. [PythonTutor.com](PythonTutor.com) is a fantastic resource for learning Python and several other languages, it's the most popular Notional Machine around today!
 2. UUhistle (pronounced "Whistle") was a project produced as a part of Juha Sorva's Dissertation
