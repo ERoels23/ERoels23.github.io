@@ -16,6 +16,7 @@ Then forms a select group of principles which one should follow closely when des
 - quote
 
 I came across several great examples of Notional Machines:
+
 <img src="/pytutor.png" alt="PythonTutor" width="400"> <img src="/uuhistle.png" alt="UUhistle" width="200"> <img src="/novis.png" alt="Novis" width="200">
 
 ## Week 2: Making the Machine
