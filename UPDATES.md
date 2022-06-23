@@ -16,7 +16,7 @@ Then forms a select group of principles which one should follow closely when des
 - quote
 
 I came across several great examples of Notional Machines:
-<img src="/pytutor.png" alt="PythonTutor" width="200"> <img src="/wwhistle.png" alt="UUhistle" width="200"> <img src="/novis.png" alt="Novis" width="200">
+<img src="/pytutor.png" alt="PythonTutor" width="400"> <img src="/uuhistle.png" alt="UUhistle" width="200"> <img src="/novis.png" alt="Novis" width="200">
 
 ## Week 2: Making the Machine
 My priority this week was understanding what information I can gather about a program before/during/after its execution. All of these together will form a set a tools that I may use to extract critical information about a program that needs to be represented in a Notional Machine. 
