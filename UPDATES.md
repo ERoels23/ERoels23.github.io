@@ -8,7 +8,7 @@ permalink: /updates/
 Of course, we can't begin our own research until we've at least sampled the current state of research in the field. The concept of a notional machine was first justified by Benedict Du Boulay in 1986. His paper, [*Some Difficulties of Learning to Program*](https://www.bibsonomy.org/bibtex/2e63b8419af16b225d3ef00fe08c12a1b/ji), detailed 5 key difficulties encountered by beginner programmers: Orientation, Notation, Structures, Pragmatics, and The Notional Machine. He placed emphasis on this Notional Machine because of its tendency to produce misconceptions in students when designed poorly. He then goes on to explain the most common misconceptions and how best to avoid them based on his experience. This paper was fundamental to the importance of Notional Machines, highlighting the need for more work to be done.
 
 "...inventing a consistent story that describes events at the right level of detail is not easy. Very often an analogy introduced at one point does not fit later on, so producing extra confusion in addition to any misapplication of the analogy at the point where it was appropriate"
-- Benedict Du Boulay, 1986
+-- Benedict Du Boulay, 1986
 
 And more work has, indeed, been done. Most notably in Dr. Juha Sorva's doctoral dissertation, titled [*Visual Program Simulation in Introductory Programming Education*](https://aaltodoc.aalto.fi/handle/123456789/3534), where he revisits the difficulties cited by Du Boulay. Using more modern psychological and educational research, he describes his own set of the 5 most pressing challenges for novice programmers:
 
@@ -19,13 +19,26 @@ And more work has, indeed, been done. Most notably in Dr. Juha Sorva's doctoral 
 5. Novices need to form a viable mental model of a notional machine to be able to understand program execution
 
 Then describes the goals and functions of a Notional Machine:
-- quote
+- is an idealized abstraction of computer hardware and other aspects of the runtime environment of programs
+- serves the purpose of understanding what happens during program execution
+- is associated with one or more programming paradigms or languages (or subsets thereof) to be described
+- gives a particular perspective to the execution of programs
+- correctly reflects what programs do when executed
+
 Then forms a select group of principles which one should follow closely when designing a Notional Machine:
-- quote
+- No-Function-In-Structure: system components are context-free (specific components work independently of the overall system)
+- Locality: component behavior is not defined by higher levels of abstraction
+- Weak Causality: there is a clear cause and effect relationship between events in the system and on the model
+- Deletion: if a vital part of the system is removed, the mental model should predict a disfunctional system
 
 I came across several great examples of Notional Machines:
 
-<img src="/pytutor.png" alt="PythonTutor" width="400"> <img src="/uuhistle.png" alt="UUhistle" width="300"> <img src="/novis.png" alt="Novis" width="200">
+<img src="/pytutor.png" alt="PythonTutor" height="300"> <img src="/uuhistle.png" alt="UUhistle" height="300"> <img src="/novis.png" alt="Novis" height="300">
+
+1. PythonTutor.com is a fantastic resource for learning Python and several other languages, it's the most popular Notional Machine around today!
+2. UUhistle (pronounced "Whistle") was a project produced as a part of Juha Sorva's Dissertation
+3. Novis is a notional machine produced to work within BlueJ to help visualize Java programs. Produced by Michael Berry and Michael Kolling [link here](https://www.researchgate.net/publication/266657026_The_state_of_play_A_notional_machine_for_learning_programming)
+
 
 ## Week 2: Making the Machine
 My priority this week was understanding what information I can gather about a program before/during/after its execution. All of these together will form a set a tools that I may use to extract critical information about a program that needs to be represented in a Notional Machine. 
