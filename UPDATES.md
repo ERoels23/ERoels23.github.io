@@ -50,7 +50,8 @@ There are many modules for Python which I've started playing around with:
 - PDB/BDB
 
 This week I focused primarily on the AST module, and produced abstract syntax trees for a variety of sample Python programs.
-- images of ASTs that we have produced
+
+<img src="/ast.png" alt="AST" height="300">
 
 These trees do a fantastic job of showing the operations done by the computer to do something as simple as assigning a variable. 
 They are also useful for understanding the relationships between entities in the program, which functions are called, etc.
@@ -64,8 +65,24 @@ Instead, I installed a Jeckyll theme that worked with GitHub Pages by default, a
 After installing a bunch of dependencies and fiddling around with HTML, my site was born!
 
 ## Week 3: Program Parsing
-iunciuerniuewnviernvrv
+With goals in mind as to how I should construct my Notional Model, it's now time to start constructing it.
+To do this, I started by identifying the key parts of program execution and noted how they were represented in various notional machines.
+Take a look at this example from PythonTutor showing several stack frames and object instantiations:
+
+<img src="/pytutor2.png" alt="pytutorEx1" height="300">
+
+- Variables are denoted as a yellow box with space for the value inside, with a label for the variable's name
+- Objects are included in a separate "Objects" column with room for both definitions and instances
+- Stack Frames are denoted in the left column, labeled "Frames". The current active frame is saturated while the others are not
+There are tons of tiny little decisions that went into how this notional machine looks, and each one is important if we are aiming for maximum student understanding.
+There are also many animated aspects of PythonTutor that are not displayed with a static image. Important program transitions are displayed with brief animations, aiding the student in understanding program execution.
+
+After getting a good idea of what I should be looking for, I returned to the modules I introduced in Week 2 and started hunting.
+Abstract Syntax Trees, StackTrace, and PDB all represent the program's execution in different ways. 
+
+In the coming weeks, I will be isolating specific program events with the help of these modules, and then using them to write a program which can translate a Python program into its occompanying notional machine!
 
 ## Week 4: The Debugger
+(coming soon!)
 
 [GitHub Repository](https://github.com/ERoels23/ERoels23.github.io/)
