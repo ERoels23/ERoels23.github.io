@@ -17,5 +17,12 @@ There are several reasons for continuing the work on Notional Machines. Although
 
 The translation of a program into a notional machine is also of interest. There are many ways to obtain information about how a program is running. The simplest example is a stacktrace, which is typically printed out when a program hits an error. Efficient and targetted translation would help build educational tools and make notional machines for accessible to the beginner CS student.
 
+### My Goals
+Computers do a LOT of work behind-the-scenes to make things happen. Sometimes this behind-the-scenes work can give meaningful insight into how a program runs, and other times it introduces unecessary complexity which would only serve to confuse a novice programmer. Because of this discrepency, every notional model MUST "lie" to students on some level. 
+
+For example, all objects in Python are actually stored on the heap, with references placed in the relevant stack frames where they're a "local variable". In a notional representation, it would be most accurate to show these objects stored in the heap with references inside stack frames, but this would not be helpful to beginner programmers because we treat objects as if they are stored in stack frames. This notion of stack frames is also a fundamental principle of programming, so novices would be robbed of valuable concepts simply because of an implementation choice made by Python.
+
+My ideal notional machine would be open and honest about how and when it was lying to the user, giving them options to adjust the level of accuracy/complexity. This will prioritize understanding while still allowing students to dig deeper if they so choose!
+
 
 [GitHub Repository](https://github.com/ERoels23/ERoels23.github.io/)
