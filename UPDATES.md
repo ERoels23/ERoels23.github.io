@@ -35,7 +35,7 @@ I came across several great examples of Notional Machines:
 
 <img src="/pytutor.png" alt="PythonTutor" height="300"> <img src="/uuhistle.png" alt="UUhistle" height="300"> <img src="/novis.png" alt="Novis" height="300">
 
-1. PythonTutor.com is a fantastic resource for learning Python and several other languages, it's the most popular Notional Machine around today!
+1. [PythonTutor.com](PythonTutor.com) is a fantastic resource for learning Python and several other languages, it's the most popular Notional Machine around today!
 2. UUhistle (pronounced "Whistle") was a project produced as a part of Juha Sorva's Dissertation
 3. Novis is a notional machine produced to work within BlueJ to help visualize Java programs. Produced by Michael Berry and Michael Kolling [link here](https://www.researchgate.net/publication/266657026_The_state_of_play_A_notional_machine_for_learning_programming)
 
