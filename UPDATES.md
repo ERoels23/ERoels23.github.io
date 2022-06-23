@@ -5,11 +5,19 @@ permalink: /updates/
 ---
 
 ## Week 1: Diving In
-Of course, we can't begin our own research until we've at least sampled the current state of research in the field. The concept of a notional machine was first justified by Benedict Du Boulay in 1986. His paper, *Some Difficulties of Learning to Program*, detailed 5 key difficulties encountered by beginner programmers: Orientation, Notation, Structures, Pragmatics, and The Notional Machine. He placed emphasis on this Notional Machine because of its tendency to produce misconceptions in students when designed poorly. He then goes on to explain the most common misconceptions and how best to avoid them based on his experience. This paper was fundamental to the importance of Notional Machines, highlighting the need for more work to be done.
-Quote Here: "inventing a consistent story..."
+Of course, we can't begin our own research until we've at least sampled the current state of research in the field. The concept of a notional machine was first justified by Benedict Du Boulay in 1986. His paper, [*Some Difficulties of Learning to Program*](https://www.bibsonomy.org/bibtex/2e63b8419af16b225d3ef00fe08c12a1b/ji), detailed 5 key difficulties encountered by beginner programmers: Orientation, Notation, Structures, Pragmatics, and The Notional Machine. He placed emphasis on this Notional Machine because of its tendency to produce misconceptions in students when designed poorly. He then goes on to explain the most common misconceptions and how best to avoid them based on his experience. This paper was fundamental to the importance of Notional Machines, highlighting the need for more work to be done.
 
-And more work has, indeed, been done. Most notably in Dr. Juha Sorva's doctoral dissertation, titled *Visual Program Simulation in Introductory Programming Education*, where he revisits the difficulties cited by Du Boulay. Using more modern psychological and educational research, he describes his own set of the 5 most pressing challenges for novice programmers:
-- citation + quote
+"...inventing a consistent story that describes events at the right level of detail is not easy. Very often an analogy introduced at one point does not fit later on, so producing extra confusion in addition to any misapplication of the analogy at the point where it was appropriate"
+- Benedict Du Boulay, 1986
+
+And more work has, indeed, been done. Most notably in Dr. Juha Sorva's doctoral dissertation, titled [*Visual Program Simulation in Introductory Programming Education*](https://aaltodoc.aalto.fi/handle/123456789/3534), where he revisits the difficulties cited by Du Boulay. Using more modern psychological and educational research, he describes his own set of the 5 most pressing challenges for novice programmers:
+
+1. Creating programs imposes a great cognitive load on novice programmers
+2. Programmers need plan schemas which represent generic solutions to common problems, but novices have few
+3. Novices have misconceptions about basic programming concepts, which give them trouble when reading and writing programs
+4. Many creative and unexpected programming tasks require mental tracing of programs, something that novices are not always capable of
+5. Novices need to form a viable mental model of a notional machine to be able to understand program execution
+
 Then describes the goals and functions of a Notional Machine:
 - quote
 Then forms a select group of principles which one should follow closely when designing a Notional Machine:
