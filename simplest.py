@@ -1,7 +1,7 @@
 def run():
     x = []
     x.append(1)
-    x.append("a")
+    #x.append("a")
     print(x)
     
 
