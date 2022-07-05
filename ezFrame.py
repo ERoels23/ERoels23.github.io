@@ -1,4 +1,6 @@
 from copy import deepcopy
+import ast
+import ujson
 
 class ezFrame:
     address = None
@@ -34,24 +36,27 @@ class ezFrame:
         self.current = frame.f_code.co_name
         # not sure yet how to isolate the address...
         self.address = hex(id(frame))
-        print(frame.f_locals)
-        self.locs = deepcopy(frame.f_locals)
+
+        # attempting to skirt the deepcopy TypeError
+        #self.locs = str(frame.f_locals)
+        #self.locs = ast.literal_eval(self.locs)
+
+        self.locs = ujson.dumps(frame.f_locals)
+        self.locs = ujson.loads(self.locs)
+        
         self.args = arg
         self.file = frame.f_code.co_filename
 
-    def ezprint(self):
-        if (self.file == "/Users/Eric/NOTIONS/ERoels23.github.io/simplest.py"):
-            print("ezFrame Print:")
-            print(f"ADDRESS: {self.address}")
-            print(f"LINE NO: {self.line}")
-            print(f"TYPE   : {self.eType}")
-            print(f"CURFUNC: {self.current}")
-            print(f"PARENT : {self.caller}")
-            print(f"ARGS   : {self.args}")
-            print(f"FILE   : {self.file}")
-            print(f"LOCALS :")
-            print(self.locs)
 
-    def __repr__(self):
-        # new toString() method here!
-        None
+    def ezPrint(self):
+        ret = "ezFrame Print:\n"
+        ret += f"ADDRESS: {self.address}\n"
+        ret += f"LINE NO: {self.line}\n"
+        ret += f"TYPE   : {self.eType}\n"
+        ret += f"CURFUNC: {self.current}\n"
+        ret += f"PARENT : {self.caller}\n"
+        ret += f"ARGS   : {self.args}\n"
+        ret += f"FILE   : {self.file}\n"
+        ret += f"LOCALS : {str(self.locs)}\n"
+        print(ret)
+        
