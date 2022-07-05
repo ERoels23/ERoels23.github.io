@@ -1,16 +1,20 @@
 import debugging
 import simplest
 import sys
-import ezFrame
+from ezFrame import ezFrame
+import inspect as ins
 from pprint import pprint as pp
 
 allFrames = []
+ezFrames = []
 
 def diff(li1, li2):
     return list(set(li1) - set(li2)) + list(set(li2) - set(li1)) 
 
 def mytrace(frame, event, arg):
     allFrames.append(frame)
+    ez = ezFrame(frame, event, arg)
+    ezFrames.append(ez)
     print("\nNEW FRAME COMIN IN HOT")
     print(f"FRAME {frame.f_code}")
     print(f"EVENT {event}")
@@ -46,22 +50,25 @@ sys.settrace(mytrace)
 simplest.run()
 
 newLocals = []
-
+''' 
 for i in range(len(allFrames)):
     if i != 0:
+        # print("\nFRAME INFO:")
+        # print(ins.getframeinfo(allFrames[i]))
         l1 = list(allFrames[i].f_locals.items())
         print(l1)
         l2 = list(allFrames[i-1].f_locals.items())
         print(l2)
         if l1 != l2:
             newLocals.append(diff(l1, l2))
-
+'''
 # for some reason this is just giving me the same locals dict every time...
 # it's always saving just the one frame? Idk...
 # I think it's because the frame object is a little wonky sometimes
 
-print(newLocals)
-print(allFrames[0].f_locals.items())
+# print(newLocals)
+# print(allFrames[0].f_locals.items())
+# print(type(allFrames[0]))
 
 # im thinking we're gunna need to write a "diff" style function
 # because looking at a single frame object can't tell us much
@@ -70,3 +77,5 @@ print(allFrames[0].f_locals.items())
 # but perhaps we should start out by defining our own custom frame object
 # because the one we're dealing with is kinda ass (or im just a dumby)
 
+for f in ezFrames:
+    f.ezprint()
