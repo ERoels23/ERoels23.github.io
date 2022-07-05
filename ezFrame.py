@@ -34,22 +34,20 @@ class ezFrame:
         self.caller = frame.f_back
         self.eType = event
         self.current = frame.f_code.co_name
-        # not sure yet how to isolate the address...
+        
         self.address = hex(id(frame))
 
         # attempting to skirt the deepcopy TypeError
-        #self.locs = str(frame.f_locals)
-        #self.locs = ast.literal_eval(self.locs)
-
         self.locs = ujson.dumps(frame.f_locals)
         self.locs = ujson.loads(self.locs)
+        # seems like that's working... for now
         
         self.args = arg
         self.file = frame.f_code.co_filename
 
 
     def ezPrint(self):
-        ret = "ezFrame Print:\n"
+        ret = "PROGRAM SNAPSHOT:\n"
         ret += f"ADDRESS: {self.address}\n"
         ret += f"LINE NO: {self.line}\n"
         ret += f"TYPE   : {self.eType}\n"
@@ -59,4 +57,11 @@ class ezFrame:
         ret += f"FILE   : {self.file}\n"
         ret += f"LOCALS : {str(self.locs)}\n"
         print(ret)
+
+    # next up!
+    '''
+    we'll write a function that compares two adjacent stack frames
+    it will attempt to deduce what happened between the reporting of those 2 frames
+    
+    '''
         

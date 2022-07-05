@@ -1,5 +1,6 @@
 import debugging
 import simplest
+import simpler
 import sys
 from ezFrame import ezFrame
 import inspect as ins
@@ -7,10 +8,11 @@ from pprint import pprint as pp
 
 ezFrames = []
 
+currFile = "c:\\Users\\Eric\\Desktop\\NOTIONS\\ERoels23.github.io\\simpler.py"
+
 def mytrace(frame, event, arg):
     # this filename might be restricting too much, hard to see calls to built-in funcs
-    if frame.f_code.co_filename == "c:\\Users\\Eric\\Desktop\\NOTIONS\\ERoels23.github.io\\simplest.py":
-        print("Found a frame!")
+    if frame.f_code.co_filename == currFile:
         ez = ezFrame(frame, event, arg)
         ezFrames.append(ez)
 
@@ -47,8 +49,11 @@ def mytrace(frame, event, arg):
 
 sys.settrace(mytrace)
 
-simplest.run()
+simpler.run()
 
 for f in ezFrames:
     f.ezPrint()
 
+print("\nTRACE RESULTS:")
+print("Successfully Traced.")
+print(f"{len(ezFrames)} frames found.")
