@@ -1,8 +1,18 @@
+from re import A
+
+
 def run():
-    x = []
-    x.append(1)
-    print(x)
-    
+    class myObj:
+        myVar = 0
+        def __init__(self):
+            myVar = 17
+            return self
+        def speak(self):
+            print(self.myVar)
+    myInstance = myObj()
+    myInstance.speak()
+          
+# check for-loops and other structures    
 # this simple program right here produced a total of 5 file-local frames
 '''
 1. call   (line 1), parent function calls the run() function within this file

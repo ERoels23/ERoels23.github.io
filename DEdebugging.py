@@ -8,14 +8,13 @@ from pprint import pprint as pp
 
 ezFrames = []
 
-currFile = "c:\\Users\\Eric\\Desktop\\NOTIONS\\ERoels23.github.io\\simpler.py"
+currFile = "c:\\Users\\Eric\\Desktop\\NOTIONS\\ERoels23.github.io\\simplest.py"
 
 def mytrace(frame, event, arg):
     # this filename might be restricting too much, hard to see calls to built-in funcs
-    if frame.f_code.co_filename == currFile:
+    if (frame.f_code.co_filename == currFile or frame.f_back.f_code.co_filename == currFile):
         ez = ezFrame(frame, event, arg)
         ezFrames.append(ez)
-
 
     '''
         print("\nNEW FRAME COMIN IN HOT")
@@ -47,9 +46,18 @@ def mytrace(frame, event, arg):
     '''
     return mytrace
 
+
 sys.settrace(mytrace)
 
-simpler.run()
+simplest.run()
+
+# pop out the first and last, because it's just call/return for run() in the target file, not useful
+""" 
+ezFrames.pop(0)
+ezFrames.pop(-1) 
+"""
+# ugh okay actually these are kinda useful, because we occassionally need the previous or next frame
+# in order to fully define an assignment or function call
 
 for f in ezFrames:
     f.ezPrint()
