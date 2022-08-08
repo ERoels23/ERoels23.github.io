@@ -10,6 +10,7 @@ class ezFrame:
     current = None
     file = None
     locs = []
+    locaddrs = []
     args = []
 
     # what does my frame need?
@@ -41,6 +42,9 @@ class ezFrame:
         self.locs = ujson.dumps(frame.f_locals)
         self.locs = ujson.loads(self.locs)
         # seems like that's working... for now
+
+        # we also need to record the addresses of each variable, to find pointers
+        self.locaddrs = { {k, id(k)} for k in self.locs.keys }
         
         self.args = arg
         self.file = frame.f_code.co_filename

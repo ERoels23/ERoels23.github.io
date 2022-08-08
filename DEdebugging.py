@@ -44,6 +44,7 @@ def mytrace(frame, event, arg):
         print(f"frame.f_lineno: {frame.f_lineno}")
         print(f"frame.f_locals: {frame.f_locals}")
     '''
+    
     return mytrace
 
 
