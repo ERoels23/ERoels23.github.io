@@ -66,14 +66,19 @@ for f in ezFrames:
 
 event1 = ezEvent("assign")
 event2 = ezEvent("assign")
+event3 = ezEvent("assign")
+event4 = ezEvent("assign")
 
 event1.add([ezFrames[1], ezFrames[2]])
 event2.add([ezFrames[2], ezFrames[3]])
+event3.add([ezFrames[3], ezFrames[4]])
+event4.add([ezFrames[4], ezFrames[5]])
 
-print("RESULTS: ")
+print("\nRESULTS: ")
 print(str(event1))
 print(str(event2))
-
+print(str(event3))
+print(str(event4))
 
 print("\nTRACE RESULTS:")
 print("Successfully Traced.")

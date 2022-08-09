@@ -2,10 +2,8 @@ from sqlalchemy import false
 from ezFrame import ezFrame
 
 class ezEvent:
-    frameList = []          #to hold our series of ezFrames
-    eventType = "Default"   #assignment, class def, etc.
     types = ["assign","funcdef","classdef","funccall"]
-    strRepr = ""
+
     '''
     assign: (poss: pointer)
     funcdef: (poss: class method)
@@ -22,12 +20,16 @@ class ezEvent:
         '''
         only requires type of object before definition, adding frames comes later
         '''
+        self.frameList = []
+        self.strRepr = ""
+        self.eventType = type
+
         if type in self.types:
             self.eventType = type
         else:
             raise TypeError("valid event types: assign, funcdef, classdef, funccall")
 
-        self.strRepr = "DICK AND BALLS"
+        self.strRepr = "Default String"
 
     def add(self, f):
         '''
@@ -45,19 +47,16 @@ class ezEvent:
         else:
             raise TypeError("ezEvent 'add()' requires ezFrame or list of ezFrames")
 
+
         if self.eventType == "assign":
             ez1 = self.frameList[0]
             ez2 = self.frameList[1]
             
             # dictionary comprehension to get new variable name/value
-            # TODO: this dictionary comprehension is still fucked up somehow, cuz it ain't working...
-            newvar = { k : ez2.locs[k] for k in set(ez2.locs.keys()) - set(ez1.locs.keys()) }
+            newvar = { k : ez2.locs[k] for k in set(ez2.locs) - set(ez1.locs) }
 
             newName = list(newvar.keys())[0]
             newVal = list(newvar.values())[0]
-            print("New Variable!")
-            print(f"Name: {newName}")
-            print(f"Value: {newVal}")
 
             newID = 0
             oldName = 0
@@ -66,27 +65,39 @@ class ezEvent:
             for tup in ez2.locaddrs.items():
                 if tup[0] == newName:
                     newID = tup[1]
-                    print(f"ID: {newID}")
 
             for tup in ez2.locaddrs.items():
-                print(tup)
                 if tup[1] == newID and tup[0] != newName:
                     isPointer = True
                     oldName = tup[0]
-                    print(f"Pointer to: {oldName}")
 
             # create string representation from analysis
             self.strRepr = f"New variable '{newName}' was assigned value of '{newVal}'"
             if isPointer:
                 self.strRepr += f" (points to '{oldName}')"
-
-        # TODO: implement functionality beyond assignment
-        '''
+        
         elif type == "funcdef":
+            # new stack pointer, call type, curfunc for name
+            # need: function name, argument names, return value name (if applicable)
+            ez1 = self.frameList[0]
+            ez2 = self.frameList[1]
+
+            # format: line with almost no info, 
+            # then line no. skips >1, another line with funcName as a local variable
+
+            # obtain name of new function, it's recorded as a new local variable
+            newFunc = { k : ez2.locs[k] for k in set(ez2.locs) - set(ez1.locs) }
+            funcName = list(newFunc.keys())[0]
+
+            self.strRepr = f"New custom function '{funcName}()' defined"
+
+        elif type == "funccall":
+            # this is where it starts to get pretty tricky
+            # 
             return None
-        elif type == "classdef":
-            return None
-        else: # "funccall"
+        
+        '''
+        else: # "classdef"
             return None
         '''
 

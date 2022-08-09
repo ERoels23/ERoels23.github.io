@@ -43,7 +43,6 @@ class ezFrame:
 
         for k in frame.f_locals.keys():
             # this should be giving us the actual memory address now...
-            print(k, id(frame.f_locals[k]))
             self.locaddrs[k] = id(frame.f_locals[k])
 
         # attempting to skirt the deepcopy TypeError
