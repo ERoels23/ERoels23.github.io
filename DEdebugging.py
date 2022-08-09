@@ -3,6 +3,7 @@ import simplest
 import simpler
 import sys
 from ezFrame import ezFrame
+from ezEvent import ezEvent
 import inspect as ins
 from pprint import pprint as pp
 
@@ -44,7 +45,7 @@ def mytrace(frame, event, arg):
         print(f"frame.f_lineno: {frame.f_lineno}")
         print(f"frame.f_locals: {frame.f_locals}")
     '''
-    
+
     return mytrace
 
 
@@ -62,6 +63,17 @@ ezFrames.pop(-1)
 
 for f in ezFrames:
     f.ezPrint()
+
+event1 = ezEvent("assign")
+event2 = ezEvent("assign")
+
+event1.add([ezFrames[1], ezFrames[2]])
+event2.add([ezFrames[2], ezFrames[3]])
+
+print("RESULTS: ")
+print(str(event1))
+print(str(event2))
+
 
 print("\nTRACE RESULTS:")
 print("Successfully Traced.")

@@ -1,5 +1,5 @@
 from sqlalchemy import false
-import ezFrame
+from ezFrame import ezFrame
 
 class ezEvent:
     frameList = []          #to hold our series of ezFrames
@@ -27,6 +27,8 @@ class ezEvent:
         else:
             raise TypeError("valid event types: assign, funcdef, classdef, funccall")
 
+        self.strRepr = "DICK AND BALLS"
+
     def add(self, f):
         '''
         only expected to be called once, it does calc once added, so use wisely!
@@ -43,46 +45,58 @@ class ezEvent:
         else:
             raise TypeError("ezEvent 'add()' requires ezFrame or list of ezFrames")
 
-        if type == "assign":
+        if self.eventType == "assign":
             ez1 = self.frameList[0]
             ez2 = self.frameList[1]
             
             # dictionary comprehension to get new variable name/value
-            newvar = { k : ez2.locs[k] for k in set(ez2.locs) - set(ez1.locs) }
-            newName = newvar.keys[0]
-            newVal = newvar.values[0]
+            # TODO: this dictionary comprehension is still fucked up somehow, cuz it ain't working...
+            newvar = { k : ez2.locs[k] for k in set(ez2.locs.keys()) - set(ez1.locs.keys()) }
+
+            newName = list(newvar.keys())[0]
+            newVal = list(newvar.values())[0]
+            print("New Variable!")
+            print(f"Name: {newName}")
+            print(f"Value: {newVal}")
 
             newID = 0
             oldName = 0
 
             # check if new variable is pointer to old variable
-            for key, value in ez2.locaddrs:
-                if key == newName:
-                    newid = value
+            for tup in ez2.locaddrs.items():
+                if tup[0] == newName:
+                    newID = tup[1]
+                    print(f"ID: {newID}")
 
-            for key, value in ez2.locaddrs:
-                if value == newid and key != newName:
+            for tup in ez2.locaddrs.items():
+                print(tup)
+                if tup[1] == newID and tup[0] != newName:
                     isPointer = True
-                    oldName = key
+                    oldName = tup[0]
+                    print(f"Pointer to: {oldName}")
 
             # create string representation from analysis
-            self.strRepr = f"New variable {newName} was assigned value of {newVal}"
+            self.strRepr = f"New variable '{newName}' was assigned value of '{newVal}'"
             if isPointer:
-                self.strRepr += f" (pointer to {oldName})"
+                self.strRepr += f" (points to '{oldName}')"
 
         # TODO: implement functionality beyond assignment
+        '''
         elif type == "funcdef":
             return None
         elif type == "classdef":
             return None
         else: # "funccall"
             return None
+        '''
 
 
     def __str__(self):
-        return "pass the boof"
+        return self.strRepr
 
-            
+    def __repr__(self):
+        return self.strRepr
+
     # needed features:
     # constructor, to some limited degree
     # add(): add an ezFrame to the event (or a list of ezFrames)

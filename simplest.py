@@ -2,15 +2,10 @@ from re import A
 
 
 def run():
-    class myObj:
-        myVar = 0
-        def __init__(self):
-            myVar = 17
-            return self
-        def speak(self):
-            print(self.myVar)
-    myInstance = myObj()
-    myInstance.speak()
+    a = [1]
+    b = a
+    aid = id(a)
+    bid = id(b)
           
 # check for-loops and other structures    
 # this simple program right here produced a total of 5 file-local frames

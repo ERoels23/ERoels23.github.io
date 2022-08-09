@@ -36,15 +36,20 @@ class ezFrame:
         self.eType = event
         self.current = frame.f_code.co_name
         
-        self.address = hex(id(frame))
+        self.address = id(frame)
+
+        # we also need to record the addresses of each variable, to find pointers
+        self.locaddrs = {}
+
+        for k in frame.f_locals.keys():
+            # this should be giving us the actual memory address now...
+            print(k, id(frame.f_locals[k]))
+            self.locaddrs[k] = id(frame.f_locals[k])
 
         # attempting to skirt the deepcopy TypeError
         self.locs = ujson.dumps(frame.f_locals)
         self.locs = ujson.loads(self.locs)
         # seems like that's working... for now
-
-        # we also need to record the addresses of each variable, to find pointers
-        self.locaddrs = { {k, id(k)} for k in self.locs.keys }
         
         self.args = arg
         self.file = frame.f_code.co_filename
