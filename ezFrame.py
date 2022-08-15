@@ -27,7 +27,6 @@ class ezFrame:
     # maybe?
         # Filename
             # PythonTutor, for example, does not support >1 file at a time
-                # as far as I'm aware... hmmm...
 
     def __init__(self, frame, event, arg):
         # requires a live frame object in order to instantiate
@@ -65,11 +64,3 @@ class ezFrame:
         ret += f"FILE   : {self.file}\n"
         ret += f"LOCALS : {str(self.locs)}\n"
         print(ret)
-
-    # next up!
-    '''
-    we'll write a function that compares two adjacent stack frames
-    it will attempt to deduce what happened between the reporting of those 2 frames
-    
-    '''
-        
