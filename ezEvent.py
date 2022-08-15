@@ -1,4 +1,3 @@
-from sqlalchemy import false
 from ezFrame import ezFrame
 
 class ezEvent:
@@ -38,13 +37,14 @@ class ezEvent:
         isPointer = False
 
         # generic setup, collect ezFrames/Events in one place
-        if isinstance(f, ezFrame) or isinstance(f, ezEvent):
-            # might append ezEvent to an ezEvent 
-            # (ex: func def within class def, constructor call within assignment, etc.)
-            self.frameList.append(f)
-        elif isinstance(f, list):
-            self.frameList += f
-        else:
+        try:
+            if isinstance(f, ezFrame) or isinstance(f, ezEvent):
+                # might append ezEvent to an ezEvent 
+                # (ex: func def within class def, constructor call within assignment, etc.)
+                self.frameList.append(f)
+            elif isinstance(f, list):
+                self.frameList += f
+        except:
             raise TypeError("ezEvent 'add()' requires ezFrame or list of ezFrames")
 
 
@@ -107,9 +107,3 @@ class ezEvent:
 
     def __repr__(self):
         return self.strRepr
-
-    # needed features:
-    # constructor, to some limited degree
-    # add(): add an ezFrame to the event (or a list of ezFrames)
-    # overwrite __str__/__repr__: so that it can report the result of the event
-        
