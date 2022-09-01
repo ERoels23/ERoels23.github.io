@@ -83,6 +83,18 @@ Abstract Syntax Trees, StackTrace, and PDB all represent the program's execution
 In the coming weeks, I will be isolating specific program events with the help of these modules, and then using them to write a program which can translate a Python program into its occompanying notional machine!
 
 ## Week 4: The Debugger
-(coming soon!)
 
-[GitHub Repository](https://github.com/ERoels23/ERoels23.github.io/)
+## Week 5: Trace Events
+ 
+## Week 6: ezFrame
+
+## Week 7: Code Events
+
+## Week 8: ezEvent
+
+## Week 9: Optimizations
+
+## Week 10: Conclusion
+
+[Code Repository](https://github.com/ERoels23/ezNotions)
+[Website Repository](https://github.com/ERoels23/ERoels23.github.io/)
